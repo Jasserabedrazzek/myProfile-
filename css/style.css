@@ -52,6 +52,7 @@ body  {
     color: white;
     position: relative;
     left: -5000px;
+    top:0;
     transition: left 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 h4 {
@@ -126,7 +127,7 @@ p {
     left:-500px;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 5;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -197,4 +198,102 @@ p {
 }
 .txt {
     color: #f78c6b;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto; 
+    width: 90%; 
+    max-width: 1200px; 
+    text-align: center;
+    position: relative;
+    left: -5000px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.projects h1 {
+    font-size: 2rem;
+    font-family: "Ubuntu", serif;
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+    letter-spacing: 1.2px;
+}
+
+.proj {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .links {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .links {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; 
+    filter: grayscale(100%); 
+}
+
+.links {
+    display: block;
+    text-decoration: none;
+    border-radius: 16px;
+    color: inherit;
+    flex: 1 1 calc(33.333% - 20px); 
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.links:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nameProject {
+    padding: 10px;
+    font-size: 1rem;
+    font-family: "Ubuntu", serif;
+    font-weight: 600;
+    text-align: center;
+    color: #555;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 10px 10px;
+}
+.nameProject:hover {
+    color: #073b4c;
 }
