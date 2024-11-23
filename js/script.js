@@ -16,8 +16,10 @@ window.onload = async  () => {
     document.querySelector('.nav').style.top = '0';
     document.querySelector('.profile').style.left = '0';
     document.querySelector('.img').style.left = '0';
+    
     await sleep(1000);
     TextA()
+    document.querySelector('.projects').style.left = '0';
 }
 
 async function TextA() {
